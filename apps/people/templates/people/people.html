@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>People</title>
+  </head>
+  <body>
+    All People <button><a href="/">Add Person</a></button>
+    <table>
+      <tr>
+        <th> Person </th>
+        <th> Action </th>
+      </tr>
+      {% for person in people %}
+        <tr>
+          <td> {{ person.name }} </td>
+          <td>  <button><a href="/show/{{person.id}}">Show</a></button></td>
+        </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
